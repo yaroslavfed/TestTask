@@ -29,6 +29,7 @@ namespace TestTask
 #elif DEBUG
             Console.WriteLine("Choose a test stand");
 #endif
+            Console.ReadKey();
         }
     }
 }
