@@ -22,14 +22,13 @@ namespace TestTask
                 ambientTemperature = 0;
             }
 
-#if true
+#if HEATING
             await HeatingBenchmark.StartupAsync(_data, ambientTemperature);
-#endif
-
-#if true
+#elif POWER
             await PowerBenchmark.StartupAsync(_data, ambientTemperature);
+#elif DEBUG
+            Console.WriteLine("Choose a test stand");
 #endif
-            Console.ReadKey();
         }
     }
 }

@@ -5,6 +5,16 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Configurations>Debug;Release;ReleaseHeating;ReleasePower</Configurations>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseHeating|AnyCPU'">
+    <DefineConstants>$(DefineConstants);HEATING</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleasePower|AnyCPU'">
+    <DefineConstants>$(DefineConstants);POWER</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
